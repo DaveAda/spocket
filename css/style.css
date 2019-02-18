@@ -1,0 +1,201 @@
+/*FONT FACES*/
+	@font-face{
+		font-family: 'gotham-black';
+		src: url('../fonts/gotham-black.otf');
+	}
+*{
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+body{
+	/*background-color: #FCE7B7;*/
+	background-image: url('../media/images/rivet-background.jpg');
+	background-size: contain;
+	transition: .5s;
+}
+.bodygradient{
+	background-image: linear-gradient(to bottom, #000 50%, #143e76, #80b6e2, #81c0f3);
+	transition: .5s;
+	
+}
+/*HEADER*/
+	header{
+		width: 100%;
+		transition: .5s;
+	}
+	.fixedheader {
+	  box-shadow: 0 10px 10px #000;
+	  color: #104568;
+	  background-color: #d66325;
+	  position: fixed;
+	  top: 0;
+	  transition: .5s;
+	  z-index: 100;
+	}
+	.headercontainer{
+		margin: 0 auto;
+		max-width: 1200px;
+	}
+	.headerlinks{
+		display: flex;	
+	}
+	.headerbutton{
+		width: 100%;
+	}
+	.textlogo{
+		background-color: none;
+		color: #104568;
+		font-family: 'gotham-black';
+		font-size: 70px;
+		text-decoration: none;
+		text-align: center;
+		list-style: none;
+		
+		padding: 0 20px 0 20px;
+		margin: 0 auto;
+		display: block;
+	}
+	.animationlink{
+		font-size: 20px;
+		font-family: 'Open Sans';
+		text-decoration: none;
+		text-transform: uppercase;
+		transform-style: preserve-3d;
+		position: relative;
+		
+		
+	}
+	.animationlink:before{
+		background: #FCE7B7;
+		border: 2px solid #104568;
+		color: #104568;
+		content: attr(title);
+		
+		left: 0;
+		padding: 0;
+		position: absolute;
+		text-align: center;
+		transform: translateY(-50%) rotateX(90deg);
+		transition: .5s;
+		transform-origin: right;
+		margin-top: 25px;
+		width: 199px;
+	}
+	.animationlink:after{
+		border: 2px solid #104568;
+		content: attr(title);
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 0;
+		background: #104568;
+		color: #FCE7B7;
+		margin-top: 25px;
+		width: 199px;
+		text-align: center;
+		transition: .5s;
+		transform-origin: left;
+		transform: translateY(0) rotateX(0deg);
+	}
+	.animationlink:hover:before{
+		transform: translateY(0) rotateX(0deg);
+	}
+	.animationlink:hover:after{
+		transform: translateY(50%) rotateX(90deg);
+	}
+	.header-animation{
+		margin: 0 auto;
+		width: 100%;
+	}
+	.cat-header-animation{
+		margin: 0 auto;
+		text-align: center;
+		width: 100%;
+	}
+/*TWINKLING STARS*/
+/*MAIN PAGE VIDEO*/
+	.teaservideo{
+		margin: 150px auto 50px auto;
+		max-width: 1000px;
+		padding-right: 30px;
+		transition: .5s;
+	}
+	.teaserclass{
+		margin-top: 500px;
+		transition: .5s;
+	}
+	.vidwrapper{
+		border: 15px solid #0B4469;
+		width: 100%;
+		position: relative;
+		padding-top: 56.25%;
+	}
+	#teaservideo{
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+/*SOCIAL MEDIA BANNER*/
+	.social-media{
+		background-color: #104568;
+		box-shadow: 0 10px 10px #000;
+		
+	}
+	.social-media-container{
+		align-items: center;
+		display: flex;
+		justify-content: space-around;
+		margin: 0 auto;
+		max-width: 1200px;
+	}
+	.social-media-container img{
+		max-width: 150px;
+		padding: 8px 0;
+		width: 100%;
+	}
+	.facebook img{
+		
+	}
+	.instagram img{
+		
+	}
+	.youtube img{
+		max-width: 120px;
+	}
+	.icon{
+		align-items: center;
+		display: flex;
+		max-width: 25%;
+	}
+	.icon i{
+		color: #d66325;
+		font-size: 40px;
+		padding-right: 10px;
+	}
+/*BIO*/
+	#bioscroll{
+		position: absolute;
+		top: 710px;
+	}
+	.bio{
+		padding-top: 50px;
+	}
+	.bio,
+	.biocontainer{
+		display: flex;
+		margin: 0 auto;
+		max-width: 1200px;
+		width: 100%;
+	}
+	.biophoto,
+	.biotext{
+		width: 50%;
+	}
+	.biophoto img{
+		width: 100%;
+	}
+
+
