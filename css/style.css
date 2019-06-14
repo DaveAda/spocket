@@ -1,7 +1,19 @@
 /*FONT FACES*/
 	@font-face{
+		font-family: 'dos';
+		src: url('../fonts/dos.ttf');
+	}
+	@font-face{
+		font-family: 'futura';
+		src: url('../fonts/futura.ttf');
+	}
+	@font-face{
 		font-family: 'gotham-black';
 		src: url('../fonts/gotham-black.otf');
+	}
+/*DISPLAY NONE*/
+	.star-background{
+		display: none;
 	}
 *{
 	margin: 0;
@@ -12,26 +24,47 @@ body{
 	/*background-color: #FCE7B7;*/
 	background-image: url('../media/images/rivet-background.jpg');
 	background-size: contain;
-	transition: .5s;
+	transition: background-image .5s;
+	-webkit-transition: background-color .5s;
+    -o-transition: background-color .5s;
+    -moz-transition: background-color .5s;
 }
 .bodygradient{
 	background-image: linear-gradient(to bottom, #000 50%, #143e76, #80b6e2, #81c0f3);
-	transition: .5s;
-	
+	transition: background-image .5s;
+	-webkit-transition: background-color .5s;
+    -o-transition: background-color .5s;
+    -moz-transition: background-color .5s;
+
+}
+.star-background{
+	left: 0;
+	overflow-x: hidden;
+	position: absolute;
+	margin: auto;
+	top: 421px;
+	right: 0;
+	z-index: -10;
+}
+.star-background img{
+	height: 700px;
+	width: 100%;
 }
 /*HEADER*/
 	header{
 		width: 100%;
-		transition: .5s;
+		transition: .5s
 	}
 	.fixedheader {
 	  box-shadow: 0 10px 10px #000;
-	  color: #104568;
 	  background-color: #d66325;
 	  position: fixed;
 	  top: 0;
 	  transition: .5s;
 	  z-index: 100;
+	}
+	#textlogofixed{
+		color: #fff;
 	}
 	.headercontainer{
 		margin: 0 auto;
@@ -43,6 +76,9 @@ body{
 	.headerbutton{
 		width: 100%;
 	}
+	#textlogofixed{
+		color: #fff;
+	}
 	.textlogo{
 		background-color: none;
 		color: #104568;
@@ -51,7 +87,6 @@ body{
 		text-decoration: none;
 		text-align: center;
 		list-style: none;
-		
 		padding: 0 20px 0 20px;
 		margin: 0 auto;
 		display: block;
@@ -71,7 +106,6 @@ body{
 		border: 2px solid #104568;
 		color: #104568;
 		content: attr(title);
-		
 		left: 0;
 		padding: 0;
 		position: absolute;
@@ -114,29 +148,75 @@ body{
 		width: 100%;
 	}
 /*TWINKLING STARS*/
+/*EVENT POSTER*/
+	.next-show-poster{
+		left: 0;
+		max-width: 1500px;
+		position: absolute;
+		top: 15px;
+		width: 100%;
+		z-index: -1;
+	}
+	.next-show-poster-container{
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		width: 100%;
+	}
+	.poster{
+		max-width: 16.67%;
+	}
+	.next-show-poster-container img{
+		width:	100%;
+	}
+	/*NEXT SHOW TICKETS*/
+	.next-show-tickets{
+		left: 30px;
+		position: absolute;
+		text-align: center;
+		top: 100px;
+		transform: rotate(340deg);
+		width: 400px;
+		z-index: 99;
+	}
+	.next-show-tickets a{
+		color: #fff;
+		font-family: 'gotham-black';
+		font-size: 32px;
+		line-height: 1.5;
+		text-decoration: none;
+		text-shadow: -14px 13px 2px #000;
+		z-index: 9999;
+	}
+	.next-show-tickets span{
+		border-bottom: 5px solid #d66325;
+		color: #d66325;
+		text-shadow: none;
+	}
 /*MAIN PAGE VIDEO*/
 	.teaservideo{
-		margin: 150px auto 50px auto;
+		margin: 70px auto 50px auto;
 		max-width: 1000px;
 		padding-right: 30px;
-		transition: .5s;
 	}
 	.teaserclass{
 		margin-top: 500px;
-		transition: .5s;
 	}
 	.vidwrapper{
 		border: 15px solid #0B4469;
 		width: 100%;
 		position: relative;
-		padding-top: 56.25%;
 	}
-	#teaservideo{
-		height: 100%;
-		left: 0;
+	.jarallax{
+		height: 500px
+	}
+	.click-for-full-video{
+		bottom: 5px;
+		color: #fff;
+		font-family: 'gotham-black', sans-serif;
+		font-size: 16px;
+		left: 5px;
 		position: absolute;
-		top: 0;
-		width: 100%;
 	}
 /*SOCIAL MEDIA BANNER*/
 	.social-media{
@@ -152,7 +232,7 @@ body{
 		max-width: 1200px;
 	}
 	.social-media-container img{
-		max-width: 150px;
+		max-width: 130px;
 		padding: 8px 0;
 		width: 100%;
 	}
@@ -163,7 +243,7 @@ body{
 		
 	}
 	.youtube img{
-		max-width: 120px;
+		max-width: 100px;
 	}
 	.icon{
 		align-items: center;
@@ -178,24 +258,311 @@ body{
 /*BIO*/
 	#bioscroll{
 		position: absolute;
-		top: 710px;
+		top: 865px;
 	}
 	.bio{
+		overflow: hidden;
 		padding-top: 50px;
 	}
-	.bio,
 	.biocontainer{
-		display: flex;
 		margin: 0 auto;
 		max-width: 1200px;
 		width: 100%;
 	}
-	.biophoto,
+	.bio-band-photo{
+		background-image: url('../media/images/rivet-background.jpg');
+		background-size: cover;
+		border: 15px solid #0B4469;
+		margin-top: 20px;
+	}
+	.bio-band-photo img{
+		display: block;
+		max-width: 100%;
+	}
 	.biotext{
-		width: 50%;
+		margin: 0 auto;
+		position: relative;
+		max-width: 1000px;
+		width: 100%;
+	}
+	.biotext p{
+		padding: 10px 0;
+	}
+	/*ROCKET 1*/
+	.spocket-rocket{
+		position: absolute;
+		left: 0;
+		top: 500px;
+		z-index: -1;
+	}
+	.spocket-rocket img{
+		max-width: 500px;
+		transform: rotate(45deg);
+	}
+/*MAIN BIO ANIMATION*/
+	.biotextimg{
+		margin: 0 auto;
+		max-width: 200px;
+		opacity: 0;
+		transition: .5s;
+	}
+	.biotextimg img{
+		width: 100%;
+	}
+	.bio-band-name{
+		color: #d66325;
+		font-family: 'gotham-black';
+		text-transform: uppercase;
+	}
+	.biotextbioa,
+	.biotextbiob,
+	.biotextbioc,
+	.biotextbiod,
+	.biotextbioe,
+	.biotextbiof,
+	.biotextbiog,
+	.biotextbioh,
+	.biotextbioi,
+	.biotextbioj,
+	.biotextbiok,
+	.biotextbiol,
+	.biotextbiom,
+	.biotextbion,
+	.biotextbioo,
+	.biotextbiop,
+	.biotextbioq,
+	.biotextbior,
+	.biotextbios,
+	.biotextbiot,
+	.biotextbiou{
+		opacity: 0;
+		transition: .5s;
+	}
+	.biofader{
+		opacity: 1;
+		transition: .5s;
+	}
+	.minibio{
+		color: red;
+		position: absolute;
+		left: 10px;
+		top: 10px;
+	}
+	.socialmediabuttonbio .minibio i{
+		color: #D66325;
+		padding-left: 5px;
+		text-shadow: 2px 2px #000;
+		transition: .2s;
+	}
+	.minibio i:hover{
+		color: #fff;
+		transition: .2s;
+	}
+	.biotextbox,
+	.kenbiotext,
+	.lukebiotext,
+	.gordonbiotext,
+	.colinbiotext{
+		margin: 0 auto;
+		text-align: center;
+	}
+	.biotext h1,
+	.lukebiotext h1,
+	.gordonbiotext h1,
+	.colinbiotext h1{
+		color: #fff;
+		font-family: 'cosmonaut', sans-serif;
+		font-size: 55px;
+		padding-bottom: 10px;
+		text-shadow: 0 15px 5px #000;
+	}
+	.kenbiotext h1{
+		color: #fff;
+		font-family: 'gotham-black', sans-serif;
+		font-size: 41px;
+		text-shadow: 10px 10px 5px #000;
+	}
+	.bio i{
+		color: #fff;
+		font-size: 40px;
+		padding-bottom: 5px;
+	}
+	.biotext p,
+	.kenbiotext p,
+	.lukebiotext p,
+	.gordonbiotext p,
+	.colinbiotext p{
+		color: #fff;
+		font-family: 'Oswald', sans-serif;
+		font-size: 24px;
+		text-shadow: 0 5px 5px #000;
 	}
 	.biophoto img{
 		width: 100%;
 	}
-
-
+/*INDIVIDUAL MEMBERS*/
+	.members-row-one,
+	.members-row-two{
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		width: 94%;
+	}
+	.single-member-bio{
+		background-color: #D3D3D3;
+		border: 7px solid #0D0D0D;
+		border-radius: 22px;
+		margin-bottom: 10px;
+		text-align: center;
+		width: 450px;
+	}
+	.single-member-container{
+		border: 3px solid #0D0D0D;
+		border-radius: 15px;
+		margin: 2px;
+		padding: 10px;
+	}
+	.member-bio-name{
+		height: 50px;
+	}
+	.member-bios .member-bio-name{
+		font-size: 30px;
+		padding-top: 10px;
+	}
+	.member-bios .member-bio-copy{
+		font-size: 18px;
+	}
+	.member-bios p{
+		color: #0D0D0D;
+		font-family: 'futura', sans-serif;
+		padding: 0;
+		text-shadow: none;
+	}
+	.globes{
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		width: 50%;
+	}
+	.globes img{
+		max-height: 100px;
+		max-width: 100px;
+	}
+	.bio-social-media{
+		margin-top: -10px;
+	}
+	.bio-social-media i{
+		color: #0D0D0D;
+		font-size: 26px;
+		padding: 0 2.5px;
+	}
+	/*KONSTANTINE*/
+	.konstantine-bio-container{
+		height: calc(100% - 30px);
+	}
+	/*PONDSTAR*/
+	.pondstar-bio-container{
+		height: calc(100% - 30px);
+	}
+/*TOUR*/
+	.tour{
+		margin: 200px 0;
+		position: relative;
+	}
+	.tour-container{
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		margin: 0 auto;
+		max-width: 1000px;
+		text-align: center;
+	}
+	.tour-container p{
+		color: #fff;
+		font-family: 'dos', serif;
+		font-size: 72px;
+		text-shadow: 0 5px 5px #000;
+	}
+	#dot-one{
+		box-shadow: 0 5px 5px #000;
+		width: 10px;
+		height: 48px;
+		background-color: white;
+		margin: 0 0 8px 10px;
+		-webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+		-webkit-animation-duration: .5s; /* Safari 4.0 - 8.0 */
+		animation-name: example;
+		animation-duration: .5s;
+		animation-iteration-count: infinite;
+	}
+	@keyframes example {
+	  100% {background-color: black;
+	}
+	}
+	.clouds{
+		margin: 0 auto;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	#cloud-one{
+		left: 30%;
+		position: absolute;
+		top: -300px;
+	}
+	#cloud-two{
+		position: absolute;
+		top: -500px;
+	}
+	#cloud-three{
+		position: absolute;
+		right: 0;
+		top: -400px;
+	}
+/*FOOTER*/
+	.grass{
+		margin: 0 auto;
+		max-width: 1500px;
+		position: relative;
+		width: 100%;
+	}
+	.grass img{
+		display: block;
+		max-width: 100%;
+	}
+	.footer-cat{
+		bottom: 80px;
+		position: absolute;
+		right: 20px;
+		z-index: -1;
+	}
+	.footer-cat img{
+		max-width: 200px;
+	}
+	.footer{
+		background-color: #447e0b;
+		margin: 0 auto;
+		max-width: 1500px;
+		width: 100%;
+	}
+	.footer-container{
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		max-width: 1200px;
+	}
+	/*FOOTER LEFT*/
+	.footer-left{
+		color: #fff;
+		font-family: 'gotham-black', sans-serif;
+	}
+	/*FOOTER RIGHT*/
+	.footer-right{
+		font-family: 'Oswald', sans-serif;
+		text-align: right;
+	}
+	.footer-right a{
+		color: #fff;
+		text-decoration: none;
+	}
