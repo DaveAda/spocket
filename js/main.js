@@ -1,50 +1,4 @@
 $(document).ready(function(){
-	$(window).scroll(function(){
-	    if ($(this).scrollTop() > 355) {
-	       $('header').addClass('fixedheader textlogofixed');
-         $('.textlogo').css({'color': '#fff', 'font-size': '60px', 'padding': '0 20px 0 0'});
-         $('.animationlink').css('font-size', '15px');
-         $('.headerlinks').css('padding-left', '15px');
-	       $('.header-animation').css('display', 'none' );
-         $('.textlogo').css('padding', '0 20px 0 10px');
-	       $('body').addClass('bodygradient');
-	       $('.teaservideo').addClass('teaserclass');
-         $('.star-background').css('display', 'block');
-	    }
-	       else {
-	       $('header').removeClass('fixedheader textlogofixed')
-         $('.textlogo').css({'color': '#104568', 'font-size': '70px', 'padding': '0 20px'});;
-	       $('.header-animation').css('display', 'block');
-         $('.animationlink').css('font-size', '20px');
-         $('.textlogo').css('padding', '0 20px 0 20px');
-         $('.headerlinks').css('padding-left', '0');
-	       $('body').removeClass('bodygradient');
-	       $('.teaservideo').removeClass('teaserclass');
-         $('.star-background').css('display', 'none');
-	    }
-	});
-});
-
-$(document).ready(function(){
-
-  var $biotextbox = $('.biotextbox');
-  var $colinbandphoto = $('#colinbandphoto');
-  var $colinbiophoto = $('#colinbiophoto')
-  var $colinbiotext = $('.colinbiotext');
-  var $colinbuttons = $('#colinbuttons');
-  var $gordonbandphoto = $('#gordonbandphoto');
-  var $gordonbiophoto = $('#gordonbiophoto');
-  var $gordonbiotext = $('.gordonbiotext');
-  var $gordonbuttons = $('#gordonbuttons');
-  var $kenbandphoto = $('#kenbandphoto');
-  var $kenbiophoto = $('#kenbiophoto');
-  var $kenbiotext = $('.kenbiotext');
-  var $kenbuttons = $('#kenbuttons');
-  var $lukebandphoto = $('#lukebandphoto');
-  var $lukebuttons = $('#lukebuttons');
-  var $lukebiophoto = $('#lukebiophoto');
-  var $lukebiotext = $('.lukebiotext');
-  var $mainbandphoto = $('#mainbandphoto');
 
   var $biotextimg = $('.biotextimg');
   var $biotextbioa = $('.biotextbioa');
@@ -68,6 +22,15 @@ $(document).ready(function(){
   var $biotextbios = $('.biotextbios');
   var $biotextbiot = $('.biotextbiot');
   var $biotextbioiu = $('.biotextbiou');
+
+  /*$headerorange.waypoint(function(){
+    $headerlinks.toggleClass('fixedheader');
+    $headerlinkslogo.toggleClass('orange-header-logo');
+    $teaservideo.toggleClass('fixedvideo');
+    $starbackground.toggle();
+    $body.toggleClass('bodygradient');
+    $body.toggleClass('bodyship');
+  });*/
 
   $biotextimg.waypoint(function(){
     $biotextimg.toggleClass('biofader');
@@ -136,44 +99,4 @@ $(document).ready(function(){
     $biotextbiou.toggleClass('biofader');
     },{offset:'70%'});
 
-  $kenbiophoto.click(function(){
-    $kenbiotext.toggle();
-    $biotextbox.toggle();
-    $mainbandphoto.toggle();
-    $kenbandphoto.toggle();
-    $lukebiophoto.toggle();
-    $gordonbiophoto.toggle();
-    $colinbiophoto.toggle();
-    $kenbuttons.toggle();
-  });
-  $lukebiophoto.click(function(){
-    $lukebiotext.toggle();
-    $biotextbox.toggle();
-    $mainbandphoto.toggle();
-    $lukebandphoto.toggle();
-    $kenbiophoto.toggle();
-    $gordonbiophoto.toggle();
-    $colinbiophoto.toggle();
-    $lukebuttons.toggle();
-  });
-  $gordonbiophoto.click(function(){
-    $gordonbiotext.toggle();
-    $biotextbox.toggle();
-    $mainbandphoto.toggle();
-    $gordonbandphoto.toggle();
-    $lukebiophoto.toggle();
-    $kenbiophoto.toggle();
-    $colinbiophoto.toggle();
-    $gordonbuttons.toggle();
-  });
-  $colinbiophoto.click(function(){
-    $colinbiotext.toggle();
-    $biotextbox.toggle();
-    $mainbandphoto.toggle();
-    $colinbandphoto.toggle();
-    $lukebiophoto.toggle();
-    $kenbiophoto.toggle();
-    $gordonbiophoto.toggle();
-    $colinbuttons.toggle();
-  });
 });

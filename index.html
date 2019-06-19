@@ -10,7 +10,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
-<body class="body">
+<body class="bodyship">
+
 <!--HEADER-->
 	<header>
 		<div class="headercontainer">
@@ -20,23 +21,14 @@
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="350" height="350">
 						  	<defs>
 						   		<clipPath id="clip">
-						    		<circle cx="175" cy="175" r="157"/>
+						    		<circle id="main-circle" cx="175" cy="175" r="157"/>
 								</clipPath>
 							</defs>
-							<circle cx="175" cy="175" r="170" fill="#0B4469">
+							<circle id="blue-pulse" cx="175" cy="175" r="170" fill="#0B4469">
 						    	<animate attributeName="r" calcMode="spline" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" values="170;175;170" dur="3s" repeatCount="indefinite"/>
 							</circle>
-					  		<circle cx="175" cy="175" r="157" fill="#000"/>
+					  		<circle id="black-circle" cx="175" cy="175" r="157" fill="#000"/>
 					  	<g clip-path="url(#clip)">
-					  		<!--SPOCKET OLD LOGO-->
-					  		<g>
-						    	<g id="spocket-moving-logo">
-						    		 <image xlink:href="media/images/spocket-logo-old.png" height="70" width="70" x="13%" y="20%"/>
-						        
-						    	</g>
-					    		<use transform="translate(400 0)" href="#land"/>
-					      		<animateTransform attributeName="transform" attributeType="XML" type="translate" from="500 0" to="-600 0" dur="8s" repeatCount="indefinite"/>
-					    	</g>
 					    	<!--STARS BACKGROUND1-->
 					  		<g>
 						    	<g id="stars-background1" fill="#fff">
@@ -51,9 +43,9 @@
 						    		  <rect x="12%" y="88%" width="5" height="5" rx="90" ry="90"/>
 						    	</g>
 					    		<use transform="translate(800 0)" href="#land"/>
-					      		<animateTransform attributeName="transform" attributeType="XML" type="translate" from="500 0" to="-250 0" dur="15s" repeatCount="indefinite"/>
+					      		<animateTransform attributeName="transform" attributeType="XML" type="translate" from="700 0" to="-650 0" dur="15s" repeatCount="indefinite"/>
 					    	</g>
-					    	<!--STARS BACKGROUND1-->
+					    	<!--STARS BACKGROUND2-->
 					  		<g>
 						    	<g id="stars-background2" fill="#fff">
 						    		  <rect x="2%" y="31%" width="1" height="1"/>
@@ -67,9 +59,9 @@
 						    		  <rect x="58%" y="8%" width="1" height="1"/>
 						    	</g>
 					    		<use transform="translate(400 0)" href="#land"/>
-					      		<animateTransform attributeName="transform" attributeType="XML" type="translate" from="400 0" to="-250 0" dur="10s" repeatCount="indefinite"/>
+					      		<animateTransform attributeName="transform" attributeType="XML" type="translate" from="700 0" to="-650 0" dur="10s" repeatCount="indefinite"/>
 					    	</g>
-					    	<!--STARS BACKGROUND2-->
+					    	<!--STARS BACKGROUND3-->
 					  		<g>
 						    	<g id="stars-background3" fill="#fff">
 						    		  <rect x="12%" y="47%" width="1" height="1"/>
@@ -83,7 +75,7 @@
 						    		  <rect x="22%" y="4%" width="1" height="1"/>
 						    	</g>
 					    		<use transform="translate(400 0)" href="#land"/>
-					      		<animateTransform attributeName="transform" attributeType="XML" type="translate" from="400 0" to="-250 0" dur="6s" repeatCount="indefinite"/>
+					      		<animateTransform attributeName="transform" attributeType="XML" type="translate" from="700 0" to="-650 0" dur="6s" repeatCount="indefinite"/>
 					    	</g>
 					    	<!--SPOCKET OLD LOGO-->
 					  		<g>
@@ -92,36 +84,34 @@
 						        
 						    	</g>
 					    		<use transform="translate(400 0)" href="#land"/>
-					      		<animateTransform attributeName="transform" attributeType="XML" type="translate" from="500 0" to="-600 0" dur="8s" repeatCount="indefinite"/>
+					      		<animateTransform attributeName="transform" attributeType="XML" type="translate" from="700 0" to="-660 0" dur="8s" repeatCount="indefinite"/>
 					    	</g>
 					    	<!--SPOCKET CAT-->
 					  		<g>
-						    	<g id="spocket-moving-logo">
+						    	<g id="spocket-moving-logo-cat">
 						    		 <image xlink:href="media/images/spocket-cat.png" height="100%" width="100%" x="0" y="0"/>
 						        
 						    	</g>
 					    		<use transform="translate(400 0)" href="#land"/>
-					      		<animateTransform attributeName="transform" attributeType="XML" type="translate" from="500 0" to="-600 0" dur="20s" repeatCount="indefinite"/>
+					      		<animateTransform attributeName="transform" attributeType="XML" type="translate" from="720 0" to="-650 0" dur="15s" repeatCount="indefinite"/>
 					    	</g>
 						</g>
 					</svg>
 				</div>
 			</div>
 <!--HEADER LINKS-->	
-			<div class="headerlist">
-				<div class="headerlinks">
-					<div class="headerbutton">
-						<div class="links"><a id="animation1" class="animationlink" href="#bioscroll" title="BIO"></a></div>
-					</div>
-					<div class="headerbutton">
-						<div class="links"><a id="animation2" class="animationlink" href="#tour" title="TOUR"></a></div>
-					</div>
-					<div class="linklogo"><a class="textlogo" href="#">SPOCKET</a></div>
-					<div class="headerbutton">
-						<div class="links"><a id="animation3" class="animationlink" href="#" title="MEDIA"></a></div>
-					</div>
-					<div class="headerbutton">
-						<div class="links"><a id="animation4" class="animationlink" href="#" title="STORE"></a></div>
+			<div id="header-orange-mobile" class="header-links">
+				<div class="header-links-container">
+					<div class="header-links-boxes">
+						<div class="header-links-boxes-container">
+							<a href="#bio"><div class="header-boxes">BIO</div></a>
+							<a href="#tour"><div class="header-boxes">TOUR</div></a>
+							<div id="headerorange" class="header-links-logo">
+								<h1>SPOCKET</h1>
+							</div>
+							<a href="#"><div class="header-boxes">MEDIA</div></a>
+							<a href="#"><div class="header-boxes">STORE</div></a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -137,27 +127,9 @@
 				</div>
 			</a>
 		</div>
-		<div class="next-show-tickets">
-			<div class="next-show-tickets-container">
-				<a href="https://www.eventbrite.com/e/the-funky-knuckles-wsg-spocket-tickets-62218061898" target="_blank">Snag your Early Bird Tickets for Spocket & The Funky Knuckles <span>here</span><br></a>
-
-			</div>
-		</div>
-<!--EVENT POSTER-->
-	<div class="next-show-poster">
-		<div class="next-show-poster-container">
-			<div class="poster"><img src="media/images/spocket-event-poster-july-9-2019-1.jpg"/></div>
-			<div class="poster"><img src="media/images/spocket-event-poster-july-9-2019-2.jpg"/></div>
-			<div class="poster"><img src="media/images/spocket-event-poster-july-9-2019-3.jpg"/></div>
-			<div class="poster"><img src="media/images/spocket-event-poster-july-9-2019-4.jpg"/></div>
-			<div class="poster"><img src="media/images/spocket-event-poster-july-9-2019-6.jpg"/></div>
-			<div class="poster"><img src="media/images/spocket-event-poster-july-9-2019-5.jpg"/></div>
-		</div>
-	</div>
 	<div class="star-background">
 		<img src="https://i.ytimg.com/vi/xnTGbgx7Ohw/maxresdefault.jpg"/>
 	</div>
-</div>
 <!--SOCIAL MEDIA BANNER-->
 	<div class="social-media">
 		<div class="social-media-container">
@@ -181,6 +153,7 @@
 	</div>
 <!--BIO-->
 	<div class="bio">
+		<div id="bio"></div>
 		<div class="biocontainer">
 			<div class="biotext">
 				<div class="biotextbox" data-jarallax-element="25">
@@ -252,7 +225,7 @@
 										<img src="media/images/moon-right.png"/>
 									</div>
 									<p class="member-bio-name">KONSTANTINE "KEN" STEBILY</p>
-									<div class="bio-social-media">
+									<div id="social-media-ken" class="bio-social-media">
 										<a href="#"><i class="fab fa-instagram"></i></a>
 										<a href="#"><i class="fab fa-facebook-square"></i></a>
 									</div>
@@ -265,10 +238,9 @@
 			</div>
 		</div>
 	</div>
-	<div id="bioscroll"></div>
-	<div id="rivetbackground"></div>
 <!--TOUR-->
-	<div id="tour" class="tour">
+	<div class="tour">
+		<div id="tour"></div>
 		<div class="clouds">
 			<img id="cloud-one" src="media/images/cloud-1.png" data-jarallax-element="-500"/>
 			<img id="cloud-two" src="media/images/cloud-2.png" data-jarallax-element="-100"/>
@@ -277,8 +249,6 @@
 		<div class="tour-container">
 			<p>TOUR DATES COMING SOON</p>
 			<div id="dot-one"></div>
-			<div id="dot-two"></div>
-			<div id="dot-three"></div>
 		</div>
 	</div>
 <!--FOOTER-->
@@ -310,6 +280,9 @@
 						<a href="#">STORE</a>
 						<a href="#">PROMOTIONAL</a>
 						<a href="#">CONTACT</a>
+					</div>
+					<div class="footer-ada">
+						<a href="mailto:dave@daveada.com?subject=Regarding SpocketMusic.com">Designed by Ada Productions</a>
 					</div>
 				</div>
 			</div>
