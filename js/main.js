@@ -23,6 +23,26 @@ $(document).ready(function(){
   var $biotextbiot = $('.biotextbiot');
   var $biotextbioiu = $('.biotextbiou');
 
+  var $body = $('body');
+  var $headerfixed = $('.header-fixed');
+  var $headerlinks = $('.header-links');
+  var $headerorange = $('.header-orange');
+  var $headertoggle = $('.header-toggle');
+  var $starbackground = $('.star-background');
+  var $rivetbackground = $('.rivetbackground');
+  var $skybackground = $('.skybackground')
+  var $teaserfixed = $('.teaser-fixed');
+  var $teaservideo = $('.teaservideo');
+
+
+  $headertoggle.waypoint(function(){
+    $headerlinks.toggle();
+    $headerfixed.toggle();
+    $body.toggleClass('skybackground');
+    $skybackground.toggle();
+    $starbackground.toggle();
+    $teaservideo.toggleClass('teaser-fixed');
+  })
   /*$headerorange.waypoint(function(){
     $headerlinks.toggleClass('fixedheader');
     $headerlinkslogo.toggleClass('orange-header-logo');
